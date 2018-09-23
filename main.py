@@ -35,6 +35,8 @@ def main(args):
     # Prepare stopwords and extend if applicable
     stopwords_path = '{}/{}'.format(root, args.stopwords_file)
     stopwords = open(stopwords_path, 'r').read().split('\n')
+
+    # Add 'stopwords' manually; TODO: substitute with spacy lemmatiser
     stopwords.extend(['know', 'think', 'like', 'thats', 'well', 'dont',
                       'get', 'actually', 'would', 'say', 'yeah', 'want', 'going',
                       'said', 'speech', 'theres', 'way', 'could', 'see', 'something',
